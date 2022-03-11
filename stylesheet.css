@@ -39,6 +39,10 @@ button {
   z-index: 10;
 }
 
+i {
+  color: #8b2131;
+}
+
 .big {
   font-size: 150%;
   font-weight: bold;
@@ -75,7 +79,7 @@ button {
 .card:hover {
   cursor: pointer;
   transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
-  box-shadow: 20px 20px 20px rgba(230, 227, 227, 0.4);
+  box-shadow: 20px 20px 20px #fec524;
 }
 
 .card:focus {
@@ -165,4 +169,37 @@ a.email:hover {
   text-decoration: underline;
   color: inherit;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height:525px;
+    width: 300px;
+    margin: 10vh auto 0 auto;
+    transform: none;
+    transition: none;
+  }
+  .card:hover,
+  .card:focus,
+  .card:before,
+  .card:after {
+    transform: none;
+    box-shadow: none;
+  }
+  .left, .right {
+    float: none;
+  }
+  .links {
+    flex-direction: column;
+  }
+  .links span {
+    margin: 6px;
+  }
+  .row {
+    margin: 25px 0 80px 0;
+  }
+  .row div {
+    margin: 8px;
+  }
+  
 }
