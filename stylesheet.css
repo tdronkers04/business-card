@@ -148,7 +148,7 @@ p {
   align-items: center;
 }
 
-a:link {
+a:link, a:visited {
   color: #8b2131;
   background-color: transparent; 
   text-decoration: none;
