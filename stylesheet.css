@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond);
+@import url(https://fonts.googleapis.com/css2?family=Rajdhani);
 
 *,
 *::before,
@@ -7,17 +7,19 @@
 }
 
 html {
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
+  font-family: "Rajdhani";
   box-sizing: inherit;
-  font-size: 10.5px;
-  letter-spacing: 1px;
-  text-shadow: 0 0 2px rgba(0, 0, 0, .5),
-                -1px -1px 1px rgba(179, 179, 179, .5),
-                1px 1px 0 rgba(255, 255, 255, 0.55),
-                0 1px 3px white;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
   overflow: hidden;
   color: #191919;
+}
+
+body {
+  background-color: #0e2240;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 21.184c.13.357.264.72.402 1.088l.661 1.768C4.653 33.64 6 39.647 6 50c0 10.271-1.222 15.362-4.928 24.629-.383.955-.74 1.869-1.072 2.75v6.225c.73-2.51 1.691-5.139 2.928-8.233C6.722 65.888 8 60.562 8 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C1.352 19.098.601 16.913 0 14.85v6.335zm20 0C17.108 13.258 16 8.077 16 0h2c0 5.744.574 9.951 2 14.85v6.334zm0 56.195c-2.966 7.86-4 13.123-4 22.621h2c0-6.842.542-11.386 2-16.396v-6.225zM6 0c0 8.44 1.21 13.718 4.402 22.272l.661 1.768C14.653 33.64 16 39.647 16 50c0 10.271-1.222 15.362-4.928 24.629C7.278 84.112 6 89.438 6 100h2c0-10.271 1.222-15.362 4.928-24.629C16.722 65.888 18 60.562 18 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C9.16 13.223 8 8.163 8 0H6z' fill='%23fff' fill-rule='nonzero' fill-opacity='.1' opacity='.349'/%3E%3C/svg%3E%0A");
+  background-size: 10px;
 }
 
 button {
@@ -26,6 +28,7 @@ button {
   background: none;
   color: inherit;
   border: none;
+  border-radius: 5px;
   padding: 0;
   font: inherit;
   text-transform: inherit;
@@ -36,14 +39,9 @@ button {
   z-index: 10;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .big {
   font-size: 150%;
+  font-weight: bold;
 }
 
 .med {
@@ -52,7 +50,7 @@ button {
 }
 
 .small {
-  font-size: 65%;
+  font-size: 85%;
   letter-spacing: .5px;
 }
 
@@ -66,18 +64,18 @@ button {
   height: 300px;
   width: 525px;
   margin: 20vh auto 0 auto;
-  padding: 20px 10px 10px 10px;
-  /* transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg); */
-  /*transform-origin: 50% 100%;*/
+  padding: 20px;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+  transform-origin: 50% 100%;
   box-shadow: 0;
   transition: transform .4s ease,
               box-shadow .4s ease;
 }
 
-/* .card:hover {
+.card:hover {
   cursor: pointer;
   transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(10px);
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, .4);
+  box-shadow: 20px 20px 20px rgba(230, 227, 227, 0.4);
 }
 
 .card:focus {
@@ -93,9 +91,9 @@ button {
 .card:focus::after {
   transform: skewY(0deg) translateX(0px) translateY(0px);
   width: 0px;
-} */
+}
 
-/* .card::before,
+.card::before,
 .card::after {
   content: "";
   position: absolute;
@@ -120,15 +118,12 @@ button {
   top: 0;
   right: 0;
   transform: skewY(45deg) translateX(6px) translateY(-3px);
-} */
+}
 
 .row {
   display: block;
   text-align: center;
-}
-
-.row:nth-child(2) {
-  margin: 35px 0 50px 0;
+  margin: 0 0 85px 0;
 }
 
 .left {
@@ -141,4 +136,33 @@ button {
 
 p {
   margin: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a:link {
+  color: #8b2131;
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a.email:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.email:hover {
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
 }
